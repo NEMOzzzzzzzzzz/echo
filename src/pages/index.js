@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import PracticeSession from './components/PracticeSession';
+import ProgressTracker from './components/ProgressTracker';
 
 export default function Home() {
   return (
@@ -13,6 +15,7 @@ export default function Home() {
           </nav>
         </div>
       </header>
+
       <section className="container hero">
         <div>
           <h1 className="hero-title">Your AI Soft Skills Mentor</h1>
@@ -24,6 +27,12 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      <section className="container assignment-components">
+        <h2 className="section-title">Interactive Practice Tools</h2>
+        <PracticeSession />
+        <ProgressTracker />
+      </section>
+
       <footer className="footer">
         <div className="footer-nav">
           <Link href="/" className="footer-link">Home</Link>
