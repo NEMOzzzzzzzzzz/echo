@@ -162,10 +162,8 @@ body {
   padding: 40px 20px;
   color: #888;
   text-align: center;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  width: 100vw;
+  margin-top: auto;
 }
 
 .footer-nav {
