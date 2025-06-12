@@ -1,5 +1,6 @@
 // pages/practice.js
 import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 export default function Practice() {
   const [question, setQuestion] = useState("Tell me about yourself.");
@@ -69,7 +70,7 @@ export default function Practice() {
               <div className="feedback-section">
                 <h2 className="feedback-title">AI Feedback:</h2>
                 <div className="feedback-content">
-                  <p>{feedback}</p>
+                  <ReactMarkdown>{feedback}</ReactMarkdown>
                 </div>
               </div>
             )}
