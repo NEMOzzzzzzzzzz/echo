@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 
 export default function Login() {
-  const [username, setUsername] = useState(""); // treating as email or username
+  const [username, setUsername] = useState(""); 
   const [password, setPassword] = useState("");
   const router = useRouter();
 
@@ -19,7 +19,7 @@ export default function Login() {
     e.preventDefault();
     const res = await signIn("credentials", {
       redirect: false,
-      email: username, // use 'email' as key for next-auth credentials
+      email: username, 
       password,
     });
 

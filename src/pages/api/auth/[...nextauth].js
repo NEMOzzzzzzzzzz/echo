@@ -9,7 +9,7 @@ export default NextAuth({
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        username: { label: "Username", type: "text" }, // Changed from 'email' to 'username'
+        username: { label: "Username", type: "text" }, 
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {

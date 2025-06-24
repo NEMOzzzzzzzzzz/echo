@@ -350,7 +350,7 @@ body {
 }
 
 .feedback-title::before {
-  content: "🤖";
+  content: "";
   font-size: 1.2rem;
 }
 
@@ -420,7 +420,7 @@ body {
 .box {
   position: relative;
   display: flex;
-  gap: 10px; /* adjust the spacing as needed */
+  gap: 10px; 
 }
 input {
   font-family: monospace, serif;

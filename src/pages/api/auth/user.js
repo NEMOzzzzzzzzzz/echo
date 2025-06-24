@@ -6,11 +6,11 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Only POST allowed" });
   }
   
-  const { email, password } = req.body; // Changed from 'username' to 'email'
+  const { email, password } = req.body; 
   
   console.log("=== LOGIN DEBUG ===");
   console.log("Request body:", req.body);
-  console.log("Email received:", email); // Changed from 'username' to 'email'
+  console.log("Email received:", email); 
   console.log("Password received:", password);
   
   try {
@@ -19,8 +19,8 @@ export default async function handler(req, res) {
     
     const user = await db.collection("users").findOne({
       $or: [
-        { name: email },    // Search by name using the email field value
-        { email: email }    // Search by email using the email field value
+        { name: email },    
+        { email: email }    
       ]
     });
     

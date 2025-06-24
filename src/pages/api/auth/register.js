@@ -4,7 +4,7 @@ import { hash } from "bcryptjs";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { name, email, password } = req.body; // Added 'name' here
+    const { name, email, password } = req.body; 
     try {
       const client = await clientPromise;
       const db = client.db("test");
@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       
       const hashedPassword = await hash(password, 12);
       const result = await db.collection("users").insertOne({
-        name,        // Added name field
+        name,        
         email,
         password: hashedPassword,
         createdAt: new Date(),
